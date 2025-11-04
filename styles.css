@@ -56,23 +56,40 @@
 .cloud:nth-child(3) {
     background-color: #CBD2E0;
     top: 60%;
-    animation-delay: 2s;
+    animation-delay: 4s;
 }
 
 .cloud:nth-child(4) {
     background-color: #CBD2E0;
     top: 70%;
-    animation-delay: 3s;
+    animation-delay: 5s;
 }
 
 .cloud:nth-child(5) {
     background-color: #CBD2E0;
     top: 75%;
-    animation-delay: -1s;
+    animation-delay: 4s;
 }
 
 .cloud:nth-child(6) {
     background-color: #788AA7;
     top: 40%;
     animation-delay: 9s;
+}
+
+.cloud:nth-child(7) {
+    background-color: #788AA7;
+    top: 60%;
+    animation-delay: -3s;
+}
+
+.cloud:nth-child(8) {
+    background-color: #788AA7;
+    top: 65%;
+}
+
+.cloud:nth-child(9) {
+    background-color: #788AA7;
+    top: 70%;
+    animation-delay: -1s;
 }
