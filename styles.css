@@ -11,7 +11,7 @@
     background-image: linear-gradient(#6083CB 0%, #8EABC6 50%, #CDCDC4 80%, #FDB4AF 100%);
 }
 
-@keyframes left-right {
+@keyframes cloud-float {
     0% {
         transform: translateX(-100%);
         opacity: 1;
@@ -31,13 +31,15 @@
     }
 }
 
+/*CLOUDS*/
+
 .cloud {
     position: absolute;
     width: 50%;
     height: 10vh;
     border-radius: 50%;
     filter: blur(1rem);
-    animation: left-right 20s infinite linear;
+    animation: cloud-float 20s infinite linear;
     opacity: 0;
 }
 
@@ -79,17 +81,134 @@
 
 .cloud:nth-child(7) {
     background-color: #788AA7;
-    top: 60%;
+    top: 50%;
     animation-delay: -3s;
 }
 
 .cloud:nth-child(8) {
     background-color: #788AA7;
-    top: 65%;
+    top: 55%;
 }
 
 .cloud:nth-child(9) {
     background-color: #788AA7;
-    top: 70%;
+    top: 60%;
     animation-delay: -1s;
+}
+
+/*LIGHTS*/
+
+@keyframes light-drift {
+    0% {
+        left: -3.5rem;
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.25;
+    }
+    100% {
+        left: 100%;
+        opacity: 1;
+    }
+}
+
+.light {
+    position: absolute;
+    bottom: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    filter: blur(1rem);
+    animation: light-drift 15s infinite linear;
+    opacity: 0;
+}
+
+.light-red {
+    background-color: #FF3F2E;
+}
+
+.light-yellow {
+    background-color: #FFF3C6;
+}
+
+.light-white {
+    background-color: #FFFFFF;
+}
+
+.light-red:nth-child(2), .light-yellow:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.light-white:nth-child(1), .light-red:nth-child(5){
+    animation-delay: 3s;
+}
+
+.light-red:nth-child(3) {
+    animation-delay: 4.5s;
+}
+
+.light-red:nth-child(4), .light-yellow:nth-child(4) {
+    animation-delay: 5s;
+}
+
+.light-yellow:nth-child(3) {
+    animation-delay: 7s;
+}
+
+.light-white:nth-child(2) {
+    animation-delay: 10s;
+}
+
+.light-red:nth-child(6) {
+    animation-delay: 12s;
+}
+
+.light-red:nth-child(7) {
+    animation-delay: 14.5s;
+}
+
+.light-white:nth-child(3) {
+    animation-delay: 15s;
+}
+
+@media screen and (max-width: 500px) {
+
+    .background {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(#C5D3ED 0%, #D5EAFA 50%, #F4EEEF 80%, #FFFDEF 100%);
+    }
+
+    .cloud:nth-child(-n+5) {
+        background-color: #D5D3E3;
+    }
+
+    .cloud:nth-child(n+6) {
+        background-color: #CBD2E0;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    .background {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(#080709 0%, #373E50 50%, #5D5D4F 80%, #9F4F15 100%);
+    }
+
+    .cloud:nth-child(-n+5) {
+        background-color: #44464C;
+    }
+
+    .cloud:nth-child(n+6) {
+        background-color: #575D6B;
+    }
+    
 }
