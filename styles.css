@@ -96,6 +96,55 @@
     animation-delay: -1s;
 }
 
+/*CHIMNEYS*/
+
+@keyframes chimney-lighting {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.chimney {
+    position: absolute;
+    bottom: -1rem;
+    height: 50vh;
+    width: 3.5rem;
+    background-image: linear-gradient(#526A79, #97C3DF);
+    filter: blur(1rem);
+}
+
+.chimney:nth-child(1), .chimney-light:nth-child(1) {
+    left: 50%;
+}
+
+.chimney:nth-child(2), .chimney-light:nth-child(2) {
+    left: calc(50% + 7rem);
+}
+
+.chimney:nth-child(3), .chimney-light:nth-child(3) {
+    left: calc(50% + 14rem);
+}
+
+.chimney-light {
+    background-color: #FF3F2E;
+    position: absolute;
+    bottom: calc(50vh - 4.5rem);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    filter: blur(1rem);
+    animation: chimney-lighting 10s infinite linear;
+}
+
+
 /*LIGHTS*/
 
 @keyframes light-drift {
@@ -185,6 +234,10 @@
         background-image: linear-gradient(#C5D3ED 0%, #D5EAFA 50%, #F4EEEF 80%, #FFFDEF 100%);
     }
 
+    .chimney {
+        background-image: linear-gradient(#AFB6BA, #97C3DF);
+    }
+
     .cloud:nth-child(-n+5) {
         background-color: #D5D3E3;
     }
@@ -201,6 +254,10 @@
         width: 100%;
         height: 100vh;
         background-image: linear-gradient(#080709 0%, #373E50 50%, #5D5D4F 80%, #9F4F15 100%);
+    }
+
+    .chimney {
+        background-image: linear-gradient(#1D100A, #292D31);
     }
 
     .cloud:nth-child(-n+5) {
