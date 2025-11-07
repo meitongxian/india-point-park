@@ -11,6 +11,14 @@
     background-image: linear-gradient(#6083CB 0%, #8EABC6 50%, #CDCDC4 80%, #FDB4AF 100%);
 }
 
+.chimneys-wrapper, .cloud-wrapper, .light-red-wrapper, .light-yellow-wrapper, .light-white-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
 @keyframes cloud-float {
     0% {
         transform: translateX(-100%);
